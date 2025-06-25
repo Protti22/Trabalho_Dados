@@ -62,7 +62,7 @@ public class Labirinto {
 
     public boolean todasSalasVisitadas(Jogador jogador) {
 
-        //Verificar com o Arthur se ele acha que o sor vai implicar com a função size ou devemos fazer o for na mão para pegar o size
+        //
         return jogador.salasVisitadas.size() == totalSalas - 1;
     }
 

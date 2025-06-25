@@ -56,7 +56,6 @@ public class App {
 
                 case "premio":
                     jogador.pontuacao += 20;
-                    //Verificar com o Arthur se ele acha que o professor vai implicar com a função add que adiciona no ultimo item do array
                     jogador.inventario.add("Item raro" + atual.id);
                     System.out.println("Parabéns! Você encontrou um item raro");
                     break;
@@ -97,7 +96,6 @@ public class App {
                 case 3:
                     System.out.println("Pontuação: " + jogador.pontuacao);
                     System.out.println("Inventário: " + jogador.inventario);
-                    //Mesma questão da função size, verificar com o Arthur se o professor não vai implicar
                     System.out.println("Salas visitadas: " + jogador.salasVisitadas.size());
                     break;
 
