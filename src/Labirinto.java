@@ -1,10 +1,15 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Labirinto {
     Sala primeiraSala;
     Sala ultimSala;
     int totalSalas;
+    ArrayList<Sala> salas = new ArrayList<>();
 
     public void adicionarSala(int id, String descricao, String tipo) {
         Sala nova = new Sala(id, descricao, tipo);
+        salas.add(nova);
 
         if(primeiraSala == null){
             primeiraSala = nova;

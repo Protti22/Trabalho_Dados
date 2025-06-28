@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
@@ -29,7 +30,7 @@ public class App {
         jogador.salaAtual = labirinto.primeiraSala;
 
         System.out.println("\nJogo iniciado!\n");
-
+        
 
         boolean jogoAtivo = true;
         while (jogoAtivo) {
@@ -48,8 +49,7 @@ public class App {
                     jogador.pontuacao -= 10;
 
                     if (atual.anterior != null) {
-                        jogador.salaAtual = atual.anterior;
-                        System.out.println("Você foi enviado de volta para a sala anterior!");
+                        System.out.println("Você perdeu 10 pontos!");
                         continue;
                     }
                     break;
@@ -79,7 +79,21 @@ public class App {
             switch (opcao) {
                 case 1:
                     if (atual.proxima != null) {
-                        jogador.salaAtual = atual.proxima;
+                        
+                        System.out.println("Digite um número de 1 a 10 para escolher uma sala: ");
+                        int escolhaSala = sc.nextInt();
+
+
+                        for (Sala elemento : labirinto.salas){
+                            if (elemento.id == escolhaSala) {
+                                jogador.salaAtual = elemento;
+                                System.out.println("Você está na sala " + elemento.id);
+                                break;
+                            }
+                        }
+
+
+
                     }else{
                         System.out.println("Você está na última sala.");
                     }
