@@ -50,7 +50,6 @@ public class App {
 
                     if (atual.anterior != null) {
                         System.out.println("Você perdeu 10 pontos!");
-                        continue;
                     }
                     break;
 
